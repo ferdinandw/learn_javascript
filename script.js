@@ -85,3 +85,56 @@ console.log(num.toFixed(1));
 const namaSiswaImpactByte = ['Sony', 'frederic', 'ozy', 'indra', 'julia'];
 namaSiswaImpactByte.push('evan');
 console.log(namaSiswaImpactByte)
+namaSiswaImpactByte.pop();
+console.log(namaSiswaImpactByte);
+
+// array for in
+for (let siswa in namaSiswaImpactByte){
+    console.log(namaSiswaImpactByte[siswa]);
+}
+
+// learn array method
+const namaSiswaUIB = ['anges', 'bill', 'river', 'oriq', 'vincent'];
+const namaSiswaGlints = namaSiswaImpactByte.concat(namaSiswaUIB); //concat = gabung array
+console.log(namaSiswaGlints)
+
+// learn array sorting
+
+console.log(namaSiswaGlints.sort());
+
+
+// number
+const numbers = [3,6,1,0,8, 12,0];
+console.log(numbers.sort())
+
+// learn array join
+console.log(namaSiswaGlints.join(', '));
+
+// for each
+namaSiswaGlints.forEach((item,index,array) =>{
+    console.log(`nama siswa : ${item}`)
+})
+
+const namaSiswaDgnAsal = namaSiswaGlints.map((item,index,array) =>{
+    return{
+        noId: index + 1,
+        name: item,
+        asal: 'Batam'
+    }
+})
+const newSiswa = {
+    noId: 11,
+    name: 'Budi',
+    asal: 'medan'
+}
+namaSiswaDgnAsal.push(newSiswa)
+console.log(namaSiswaDgnAsal)
+
+
+//  contoh array find
+const ditemukan = namaSiswaDgnAsal.filter((item,index,array) =>{
+    if (item.asal =="Batam")
+        return true;
+    return false;
+})
+console.log(ditemukan)
