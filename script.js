@@ -56,9 +56,32 @@ console.log(namaPanjang2.toUpperCase())
 // contoh searching for a substring
 const kalimat = " saya ingin jago koding supaya bisa di terima di perusahaan Google";
 const kataPencarian = "Google";
-const kataDidapat = kalimat.indexOf(kataPencarian);
-if(kataDidapat > 0){
-    console.log(`kata ${kataPencarian} ditemukan di index ${kataDidapat}`);
+// const kataDidapat = kalimat.indexOf(kataPencarian);
+console.log(kalimat)
+// if(kataDidapat > 0){
+//     console.log(`kata ${kataPencarian} ditemukan di index ${kataDidapat}`);
+// } else {
+//     console.log(`kata ${kataPencarian} tidak ditemukan`);
+// }
+
+
+if (kalimat.includes(kataPencarian)){
+    console.log(`kata ${kataPencarian} ditemukan`);
 } else {
     console.log(`kata ${kataPencarian} tidak ditemukan`);
 }
+
+
+// contoh special character usually prefix with "\"
+console.log(`newLine \n \n second newLine`)
+console.log(' dia berkata "ya itu benar" yang lain i can\' t do it')
+
+
+// learn number
+const num = 3.14;
+console.log(num.toFixed(1));
+
+// learn array
+const namaSiswaImpactByte = ['Sony', 'frederic', 'ozy', 'indra', 'julia'];
+namaSiswaImpactByte.push('evan');
+console.log(namaSiswaImpactByte)
