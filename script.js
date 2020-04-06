@@ -116,6 +116,7 @@ namaSiswaGlints.forEach((item,index,array) =>{
 })
 
 const namaSiswaDgnAsal = namaSiswaGlints.map((item,index,array) =>{
+    const kota = ["Batam", "Medan", "Malang"]
     return{
         noId: index + 1,
         name: item,
@@ -138,3 +139,33 @@ const ditemukan = namaSiswaDgnAsal.filter((item,index,array) =>{
     return false;
 })
 console.log(ditemukan)
+
+
+// property value shorthand
+
+const name = "Babe";
+const lastName = "Gokil"
+
+const person = {
+    name,
+    lastName
+
+}
+
+console.log(person.name);
+console.log(person.lastName)
+
+// object assign 
+
+const bodyMeasure = {
+    height : '170 cm',
+    weight: '80 kg',
+    kelas: 'archer'
+}
+
+const dataBaru = {
+    tanggalLahir : '1 oktober'
+}
+
+const personWithMeasure = Object.assign({}, person, bodyMeasure, dataBaru);
+console.log(personWithMeasure)
